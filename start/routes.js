@@ -16,3 +16,38 @@
 const Route = use('Route')
 
 Route.on('/').render('welcome')
+
+Route.get('/xxx', async () => {
+  return 'xxx!!!WWW'
+})
+
+
+Route.get('/login', 'UserController.login' )
+Route.post('/login', 'UserController.login' )
+
+
+Route.get('/test', async ({request, response}) => {
+
+    console.log( response );
+    return 'test!!!####$$$$'
+})
+
+Route.get('/post', async ({request, response}) => {
+    return 'post!!!@@@###'
+})
+
+
+
+
+
+
+
+
+
+
+
+
+/*Route
+    .get('users/profile', 'UserController.profile')
+    .middleware(['auth'])*/
+
