@@ -2,13 +2,22 @@
 
 class UserController {
 
-    login({request, response})
+    async login({request, response})
     {
-        console.log( request );
+        var dd = console.log;
+
+        const { email, password } = request.post();
+
+        const User = use('App/Models/User')
+
+        const user = new User({username: 'xxx', email: email, password: password});
+
+        await user.save();
 
 
 
-        return '###';
+
+        return '#LOGIN!#';
     }
 
     xxx()

@@ -13,7 +13,7 @@ module.exports = {
   | Available Serializers - lucid, database
   |
   */
-  authenticator: 'session',
+  authenticator: 'api',
 
   /*
   |--------------------------------------------------------------------------
@@ -71,5 +71,24 @@ module.exports = {
     options: {
       secret: 'self::app.appKey'
     }
+  },
+
+
+  /*
+  |--------------------------------------------------------------------------
+  | API
+  |--------------------------------------------------------------------------
+  |
+  | The jwt authenticator works by passing a jwt token on each HTTP request
+  | via HTTP `Authorization` header.
+  |
+  */
+  api: {
+      serializer: 'lucid',
+      model: 'App/Models/User',
+      scheme: 'api',
+      uid: 'email',
+      password: 'password'
   }
+
 }

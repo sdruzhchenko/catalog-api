@@ -21,30 +21,17 @@ Route.get('/xxx', async () => {
   return 'xxx!!!WWW'
 })
 
-
 Route.get('/login', 'UserController.login' )
+
 Route.post('/login', 'UserController.login' )
 
-
 Route.get('/test', async ({request, response}) => {
-
-    console.log( response );
-    return 'test!!!####$$$$'
+    return 'test!!!####$$$$@@@'
 })
 
 Route.get('/post', async ({request, response}) => {
     return 'post!!!@@@###'
 })
-
-
-
-
-
-
-
-
-
-
 
 
 /*Route
